@@ -1,8 +1,12 @@
 const input = require("fs").readFileSync("/dev/stdin", "utf8").trim();
 
-let a = parseInt(input);
-let b = parseInt(input);
+let value = input.split("\n");
 
-console.log(PROD = (a * b));
+let a = parseInt(value.shift());
+let b = parseInt(value.shift());
 
-//wrong
+let prod = a * b;
+
+console.log("PROD = " + prod);
+
+//correct

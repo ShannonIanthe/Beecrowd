@@ -1,9 +1,15 @@
 const input = require("fs").readFileSync("/dev/stdin", "utf8").trim();
 
-let a = parseInt(input);
-let b = parseInt(input);
+let value = input.split("\n")
 
-console.log(`SOMA = ${(a + b)}`);
+let a = parseInt(value.shift());
+let b = parseInt(value.shift());
 
-//wrong
+let soma = a + b;
+
+
+console.log("SOMA = " + soma);
+
+
+//correct
 
