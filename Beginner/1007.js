@@ -1,11 +1,14 @@
 const input = require("fs").readFileSync("/dev/stdin", "utf8").trim();
 
-const A = parseInt(input);
-const B = parseInt(input);
-const C = parseInt(input);
-const D = parseInt(input);
+let value = input.split("\n");
 
-const diferenca = (A * B - C * D)
+const A = parseFloat(value.shift());
+const B = parseFloat(value.shift());
+const C = parseFloat(value.shift());
+const D = parseFloat(value.shift());
+
+const diferenca = (A * B - C * D);
+
 console.log(`DIFERENCA = ${diferenca}`);
 
 //wrong
