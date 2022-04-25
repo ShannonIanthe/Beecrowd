@@ -11,4 +11,4 @@ const diferenca = (A * B - C * D);
 
 console.log(`DIFERENCA = ${diferenca}`);
 
-//wrong
+//correct
