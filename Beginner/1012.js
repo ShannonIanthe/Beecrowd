@@ -1,16 +1,19 @@
 const input = require("fs").readFileSync("/dev/stdin", "utf8").trim();
 
 let value = input.split("\n");
+const a = parseFloat(value.shift());
+const b = parseFloat(value.shift());
+const c = parseFloat(value.shift());
 
-let a = parseFloat(value.shift());
-let b = parseFloat(value.shift());
-let c = parseFloat(value.shift());
+const pi = 3.14159;
 
-let areaOfTriangle = 1.0/2 * a * c;
-let areaOfCircle = 3.14159 * Math.pow(c,2);
-let areaOfTrapezium = ((a + b) / 2) * c;
-let areaOfSquare = Math.pow(b,2);
-let areaOfRectangle = a * b;
+
+const areaOfTriangle = 1.0/2 * (a * c);
+const areaOfCircle = pi * Math.pow(c,2);
+const areaOfTrapezium = ((a + b) * c) / 2;
+const areaOfSquare = Math.pow(b,2);
+const areaOfRectangle = a * b;
+
 
 console.log(`TRIANGULO: ${areaOfTriangle.toFixed(3)}`);
 console.log(`CIRCULO: ${areaOfCircle.toFixed(3)}`); 

@@ -5,3 +5,5 @@ const y = parseInt(lines.shift());
 const minutes = (60 * y) / 30;
 
 console.log(`${minutes} minutos`);
+
+//correct
