@@ -1,33 +1,14 @@
 const input = require("fs").readFileSync("/dev/stdin", "utf8").trim();
-let value = input.split("\n");
+let value = parseInt(input);
+
+const billNotes = [100, 50 ,20, 10, 5, 2, 1];
+
 console.log(value);
 
-let billNote = parseInt(value / 100);
-console.log(`${billNote} nota(s) de R$ ${100},00`);
-value = value % 100;
+for (let billNote of billNotes) {
+    let totalBills = parseInt(value / billNote);
+    console.log(`${totalBills} nota(s) de R$ ${billNote},00`);
+    value = value % billNote;
+}
 
-billNote = parseInt(value / 50);
-console.log(`${billNote} nota(s) de R$ ${50},00`);
-value = value % 50;
 
-billNote = parseInt(value / 20);
-console.log(`${billNote} nota(s) de R$ ${20},00`);
-value = value % 20;
-
-billNote = parseInt(value / 10);
-console.log(`${billNote} nota(s) de R$ ${10},00`);
-value = value % 10;
-
-billNote = parseInt(value / 5);
-console.log(`${billNote} nota(s) de R$ ${5},00`);
-value = value % 5;
-
-billNote = parseInt(value / 2);
-console.log(`${billNote} nota(s) de R$ ${2},00`);
-value = value % 2;
-
-billNote = parseInt(value / 1);
-console.log(`${billNote} nota(s) de R$ ${1},00`);
-value = value % 1;
-
-//incorrect
