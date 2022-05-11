@@ -1,19 +1,23 @@
 const input = require("fs").readFileSync("/dev/stdin", "utf-8").trim();
-let value = parseInt(input);
+var lines = input.split('\n');
 
-const billNotes = [100, 50, 20, 10, 5, 1];
+const value = lines.shift();
+
+const bills = [100, 50, 20, 10, 5, 2];
 const coines = [1.00, 0.50, 0.25, 0.10, 0.05, 0.01];
 
-console.log("NOTAS:")
-for (let billNote of billNotes) {
-    let totalBills = parseInt(value / billNote);
-    console.log(`${totalBills} nota(s) de R$ ${billNote},00`);
-    value = value % billNote;
-}
+let n = parseFloat(value);
 
-console.log("MOEDAS:")
-for (let coin of coines) {
-    let totalCoines = parseInt(value / coin);
-    console.log(`${totalCoines} moeda(s) de R$ ${coin}`)
-}
+console.log('NOTAS:')
+bills.forEach(bill => {
+    console.log(`${parseInt(n / bill)} nota(s) de R$ ${bill.toFixed(2)}`)
+    n %= bill;
+});
+
+console.log('MOEDAS:')
+coines.forEach(coin => {
+    console.log(`${parseInt(n / coin)} moeda(s) de R$ ${coin.toFixed(2)}`)
+    n %= coin;
+})
+
 
