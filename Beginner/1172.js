@@ -1,13 +1,13 @@
-const input = require("fs").readFileSync("/dev/stdin", "utf8").trimEnd();
-const value = parseInt(input);
+const input = require("fs").readFileSync("/dev/stdin", "utf-8").trim().split("\n");
 
-const x = value.shift();
-const arr = [];
+for (let i = 0; i < input.length; i++) {
+    const number = parseInt(input[i]);
 
-for (i = 0; i < value.length; i++) {
-    x += value[i];
-    if ( i === null | i < 0 )
-    console.log(1)
+    if (number > 0) {
+        global.console.log(`X[${i}] = ${number}`)
+    } else {
+        global.console.log(`X[${i}] = 1`)
+    }
 }
 
 

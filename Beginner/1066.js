@@ -1,17 +1,54 @@
-const arr = [-5, 0, -3, -4, 12];
+const input = require("fs").readFileSync("/dev/stdin", "utf-8").trim().split("\n");
 
-let positive = 0;
-let negative = 0;
-let pares = 0;
-let impares = 0;
-for(let i = 0; i < arr.length; i++) {
-    if (positive[i] >= 0) {
-        console.log (`${positive++} valor(es) positivo(s)`)
-    } else if (negative[i] <= 0) {
-        console.log (`${negative++} valor(es) negativo(s)`)
-    } else if (pares[i] % 2 === 0) {
-        console.log (`${pares++} valor(es) par(es)`)
-    } else {
-        console.log (`${impares[i]++} valor(es) impar(es)`)
+let even = 0;
+
+// even
+for(let i = 0; i < input.length; i++) {
+    let number = parseInt(input[i]);
+    if (number % 2 === 0) {
+        even++;
     }
 }
+
+global.console.log(`${even} valor(es) par(es)`);
+
+let odd = 0;
+
+//odd
+for (let i = 0; i < input.length; i++) {
+    let number = parseInt(input[i]) 
+    if (Math.abs(number % 2) > 0) {
+        odd++;
+    }
+}
+
+global.console.log(`${odd} valor(es) impar(es)`);
+
+count = 0;
+
+// positive
+for(let i = 0; i < input.length; i++) {
+    let number = parseInt(input[i]);
+    if (number > 0) {
+        count++;
+    }
+}
+
+global.console.log(`${count} valor(es) positivo(s)`);
+
+count = 0;
+  
+// negative
+for(let i = 0; i < input.length; i++) {
+    let number = parseInt(input[i]);
+    if (number < 0) {
+        count++;
+    }
+}
+
+global.console.log(`${count} valor(es) negativo(s)`);
+
+
+
+
+
