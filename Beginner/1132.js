@@ -1,15 +1,18 @@
-const input = require("fs").readFileSync("/dev/stdin", "utf8").trimEnd();
-const value = parseInt(input);
+const input = require("fs").readFileSync("/dev/stdin", "utf8").trim();
+const value = input.split(" ");
 
 const x = parseInt(value.shift());
 const y = parseInt(value.shift());
 
-function sumNotThirteen (x, y) {
-    sum = 0;
-    for (let i = x; i <= y; i++) {
-    
-    if (i % 13 !== 0) 
-    sum += i;
+for (let i = 0; i < x.length; i++) {
+    const xthing = x[i];
+
+    for (let j = 0; j < y.length; j++) {
+        const ything = y[i];
+
+        if ( xthing && ything % 13 === 0) {
+            --i // if divisible by 13, do not count
+        }
     }
-    return sum;
 }
+console.log(xthing);

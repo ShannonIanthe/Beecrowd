@@ -1,14 +1,18 @@
 const input = require("fs").readFileSync("/dev/stdin", "utf8").trim();
-let value = input.split("\n");
 
-for (let i = 0; i < value.length; i++) {
-    value[i] = value[i].split(" ");
+let value = input.split("\n");
+const a = parseFloat(value.shift()); 
+const b = parseFloat(value.shift()); 
+const c = parseFloat(value.shift());
+
+
+const r1 = (-b + Math.sqrt(b^2 - (4*a*c))) / (2 * a);
+const r2 = (-b - Math.sqrt(b^2 - (4*a*c))) / (2 * a);
+
+
+if (r1 | r2 !== Math.sqrt(0) ) {
+    console.log("Impossivel Calcular");
 }
 
-const a = parseInt(value[0][0]);
-const b = parseInt(value[0][1]);
-const c = parseInt(value[0][2]);
-
-const bhaskara = b^2 - (a * c);
-
-console.log(bhaskara);
+console.log(`R1 = ${r1.toFixed(5)}`);
+console.log(`R2 = ${r2.toFixed(5)}`);

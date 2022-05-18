@@ -21,4 +21,4 @@ console.log(`TRAPEZIO: ${areaOfTrapezium.toFixed(3)}`);
 console.log(`QUADRADO: ${areaOfSquare.toFixed(3)}`);
 console.log(`RETANGULO: ${areaOfRectangle.toFixed(3)}`);
 
-//wrong
+

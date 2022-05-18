@@ -11,5 +11,3 @@ let maior = (c + maiorAB + Math.abs(c - maiorAB)) / 2;
 
 console.log(`${maior} eh o maior`);
 
-//correct in terminal
-//incorrect in beecrowd
