@@ -9,13 +9,17 @@ for (let i = 0; i < value.length; i++) {
 const a = parseInt(value[0][0]);
 const b = parseFloat(value[0][1])
 
-const one = 4.00;
-const two = 4.50;
-const three = 5.00;
-const four = 2.00;
-const five = 1.50;
+for (let j = 0; j < value.length; j++) {
+    value[j] = value[i].split(" ")
+}
 
-const total = a * (b * two);
+const one = [0][1];
+const two = [1][1];
+const three = [2][1];
+const four = [3][1];
+const five = [4][1];
+
+const total = a * (2 * two);
 
 
 
